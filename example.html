@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Slideshow</title>
+	<style>
+		.slideshow img {
+			max-width: 100%;
+		}
+
+		.slideshow {
+			position: relative;
+			margin: 0 auto;
+		}
+
+		.slideshow > div {
+			line-height: 0;
+			width: 100%;
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="slideshow">
+	<div><img src="http://lorempixel.com/1200/800/abstract/1/"></div>
+	<div><img src="http://lorempixel.com/1200/800/abstract/2/"></div>
+	<div><img src="http://lorempixel.com/1200/800/abstract/3/"></div>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
+<script src="slideshow.js"></script>
+<script>
+	var element = jQuery(".slideshow");
+	var slideshow = new Slideshow(element, element.children("div"), {});
+</script>
+</body>
+</html>
